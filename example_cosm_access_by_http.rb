@@ -13,3 +13,7 @@ response = http.request(request)
 
 puts response.code
 puts response.body
+
+
+
+#For additional exmamples on how to use Net:HTTP, see https://github.com/augustl/net-http-cheat-sheet/

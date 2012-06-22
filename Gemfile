@@ -8,3 +8,4 @@ gem 'fakeweb'
 gem 'pachube-stream'
 
 
+gem 'ruby-debug-ide'  #Useful for RubyMine IDE, so that you can use the debugger

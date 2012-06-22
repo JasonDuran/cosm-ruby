@@ -15,10 +15,9 @@ class CosmParser
   end
 
 
-  def self.convert_json_to_object(json_string)
+  def self.convert_json_to_ruby_object(json_string)
     JSON(json_string)
   end
-
 
 
 end
