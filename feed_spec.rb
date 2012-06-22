@@ -6,22 +6,21 @@ describe Feed do
 
   before :all do
     @json_string = File.open(File.join('spec', 'fixtures', '49679.json')).read
-    @current_settings = Feed.new(@json_string)
-
+    @current_feed = Feed.new(@json_string)
   end
 
   context "can parse any particular datastream from a feed" do
 
     it "and provide the tag array" do
-      @current_settings.tags_array_for_datastream(1).should == ["Rental"]
+      @current_feed.tags_array_for_datastream(1).should == ["Rental"]
     end
 
     it "and provide the current value" do
-      @current_settings.current_value_for_datastream(1).should == "123"
+      @current_feed.current_value_for_datastream(1).should == "123"
     end
 
     it "and provide the unit label" do
-      @current_settings.unit_label_for_datastream(1).should == "W"
+      @current_feed.unit_label_for_datastream(1).should == "W"
     end
   end
 
