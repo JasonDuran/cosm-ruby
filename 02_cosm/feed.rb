@@ -2,8 +2,13 @@ require "./cosm_parser.rb"
 
 class Feed
 
-  def initialize(json_string)
-    @feed_object = CosmParser.convert_json_to_ruby_object(json_string)
+  def initialize(input)
+    case input
+      when String
+        @feed_object = CosmParser.convert_json_to_ruby_object(input)
+      when Hash
+        @feed_object = input
+    end
   end
 
   def tags_array_for_datastream(stream_number)

@@ -24,10 +24,14 @@ EM.run do
   feed = connection.subscribe("/feeds/6643") # random Feed  
   
   feed.on_datastream do |response|
+    puts "on_datastream"
     puts response
+    current_value = Feed.new(response["body"]).current_value_for_datastream(1)
+    puts "current value: " + current_value
   end
   
   feed.on_complete do |response|
+    puts "on complete"
     puts response
   end
   
