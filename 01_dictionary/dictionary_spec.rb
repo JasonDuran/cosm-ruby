@@ -8,7 +8,7 @@
 # * regular expressions
 #
 
-require '../dictionary.rb'
+require './dictionary.rb'
 
 describe Dictionary do
   before do
